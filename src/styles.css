@@ -1,0 +1,147 @@
+:root {
+  --bg: #f0f4ff;
+  --card: #ffffff;
+  --accent: linear-gradient(135deg, #667eea, #764ba2);
+  --accent-solid: #667eea;
+  --muted: #6b7280;
+  --danger: #e53e3e;
+}
+
+/* ✅ Global fix so padding & border don’t break layouts */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, Arial;
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 480px;
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.sub {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: var(--accent-solid);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.primary {
+  background: var(--accent);
+  color: white;
+}
+
+button.muted {
+  background: #f3f4f6;
+  color: #333;
+}
+
+button.danger {
+  background: var(--danger);
+  color: white;
+}
+
+.error {
+  color: var(--danger);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.links a {
+  color: var(--accent-solid);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+}
